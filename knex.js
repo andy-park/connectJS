@@ -12,15 +12,15 @@ var knex = require('knex')({
   }
 });
 
-// function printLine(person) {
-//   console.log('- ' + person.id + ": " + person.first_name + person.last_name + "born " + person.birthdate);
-// }
+function printLine(person) {
+  console.log('- ' + person.id + ": " + person.first_name + " " + person.last_name + ", " + "born " + " " + person.birthdate);
+
 knex('famous_people')
 .where('first_name', '=', process.argv[2])
 .orWhere('last_name', '=', process.argv[2])
 .asCallback(function(err, rows) {
   if (err) return console.error(err);
-  console.log(rows);
+  console.log(result.rows.forEach(printLine));
   knex.destroy();
 });
 

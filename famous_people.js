@@ -11,7 +11,7 @@ const client = new pg.Client({
 });
 
 function printLine(person) {
-  console.log('- ' + person.id + ": " + person.first_name + person.last_name + "born " + person.birthdate);
+  console.log('- ' + person.id + ": " + person.first_name + " " + person.last_name + ", " + "born " + " " + person.birthdate);
 }
 
 client.connect((err) => {
