@@ -5,7 +5,10 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      filename: require('./settings')
+      //filename: require('./settings')
+      database: 'development',
+      user: 'development',
+      password: 'development'
     }
   },
 
@@ -13,8 +16,8 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
-      password: 'password'
+      user:     'development',
+      password: 'development'
     },
     pool: {
       min: 2,

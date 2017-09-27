@@ -23,8 +23,8 @@ knex('famous_people')
   birthdate: dob
 })
 .returning('id')
-.then(id) => {
-console.log('New record inserted ' = id);
-}
+.then((id) => {
+console.log('New record inserted ' + id);
+});
 
 knex.destroy();
